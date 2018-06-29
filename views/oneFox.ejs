@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<body>
+<div class="container">
+    <div style="padding: 15px; border: solid gray 2px; border-radius: 2px; display: inline-block;">
+    <h1><%= fox.name %></h1>
+    <h3>Age: <%= fox.age %></h3>
+    <h3>Favorite Food: <%= fox.favFood %></h3>
+    <a href="/fox/edit/<%= fox._id %>"><button class="btn-primary">Edit fox</button></a>
+    <a href="/fox/destroy/<%= fox._id %>"><button class="btn-danger">Delete fox</button></a>
+
+</div>
+    
+</body>
+</html>

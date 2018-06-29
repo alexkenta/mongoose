@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mongooseDashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <% for (let fox in allFoxes) {%>
+    <div style="padding: 15px; display: inline-block; border: solid gray 2px; border-radius: 2px;">
+    <h3><a href="/fox/<%= allFoxes[fox]._id %>"><%= allFoxes[fox].name %></a></h3>
+    <h4><%= allFoxes[fox].age %> years old</h4>
+    <h5>Favorite food: <%= allFoxes[fox].favFood %></h5><br>
+    <a href="/fox/edit/<%= allFoxes[fox]._id %>"><button class="btn-primary">Edit fox</button></a>
+    <a href="/fox/destroy/<%= allFoxes[fox]._id %>"><button class="btn-danger">Delete fox</button></a>
+    </div>
+    <% } %>
+    <a href="/fox/new">Add a fox to the pack</a>
+</body>
+</html>

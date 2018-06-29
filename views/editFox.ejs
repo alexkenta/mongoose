@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>foxEditor</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1>Edit this fox</h1>
+    <form action="/fox/<%= fox._id %>" method="post">
+        <input type="text" name="name" value="<%= fox.name %>" id=""><br>
+        <input type="text" name="age" value="<%= fox.age %>" id=""><br>
+        <input type="text" name="favFood" value="<%= fox.favFood %>" id="">
+        <br>
+        <input class="btn-primary" type="submit" value="Submit changes">
+        <a href="/fox/destroy/<%= fox._id %>"><button type="button" class="btn-danger">Delete fox</button></a>
+    </form>
+</div>
+    
+</body>
+</html>
